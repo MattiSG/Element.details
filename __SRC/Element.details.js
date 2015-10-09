@@ -30,11 +30,10 @@ HTMLElement.prototype.insertAdjacentHTML = https://gist.github.com/1276030
 		//style
 		document.head.insertAdjacentHTML("beforeend", "<br><style>" +//<br> need for all IE
 			"details{display:block}" +
-			"details>*{display:none}" +
+			"details:not(.▼)>*:not(summary):not(.▼▼){display:none !important}" +
 			"details>summary,details>summary,details>.▼▼{display:block}" +
 			"details .details-marker:before{content:'►'}" +
 			"details.▼ .details-marker:before{content:'▼'}" +
-			"details.▼>*{display:block}" +
 		"</style>");
 
 		// property 'open'

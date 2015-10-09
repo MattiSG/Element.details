@@ -76,5 +76,11 @@ $("details").each(function(k, el) {
 ## IE < 8
  - Problem: Property `open` has the same name as Attribute `open` -> rename attribute to "$OPEN$"
 
+## Build
+
+Get Google Closure Compiler and run :
+
+`closure-compiler --js __SRC/INPUT-FILE --js_output_file __COMPILE/OUTPUT-FILE`
+
 ## TODO
 1. Listeners (open/close)
